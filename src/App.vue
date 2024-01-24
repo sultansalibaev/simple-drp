@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex">
+    <div class="w-full">
+      <DateRangePicker/>
+    </div>
+    <div class="w-full h-0 relative">
+      <DateRangePicker2/>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DateRangePicker2 from './components/DateRangePicker.vue'
+import { DateRangePicker } from './widgets/DateRangePicker'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DateRangePicker2,
+    DateRangePicker,
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 </style>
